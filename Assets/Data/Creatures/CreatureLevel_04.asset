@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7619a3278a1748649931aca9e2cb9dae, type: 3}
+  m_Name: CreatureLevel_04
+  m_EditorClassIdentifier: Assembly-CSharp::Creatures.CreatureLevelData
+  level: 4
+  creatureName: Slime
+  prefab: {fileID: 1524411113276028, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
+  eggPrefab: {fileID: 3129458609607467361, guid: c9adb4f400dd7a943b38a06de5878b7e, type: 3}
+  eggsPerCycleValue: 90
