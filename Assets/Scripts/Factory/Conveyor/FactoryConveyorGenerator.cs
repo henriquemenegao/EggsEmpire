@@ -70,10 +70,32 @@ namespace Factory.Conveyor
             conveyor.transform.localPosition =
                 new Vector3(x, conveyorHeight, z);
 
-            conveyor.transform.localRotation = Quaternion.identity;
+            conveyor.transform.localRotation = side == "Right"
+                ? Quaternion.Euler(0f, 180f, 0f)
+                : Quaternion.identity;
 
-            conveyor.transform.localScale =
-                new Vector3(length, 0.2f, conveyorWidth);
+            conveyor.transform.localScale = Vector3.one;
+            conveyor.transform.localScale = conveyorPrefab.transform.localScale;
+            CenterConveyorVisual(conveyor);
+        }
+        
+        private void CenterConveyorVisual(GameObject conveyor)
+        {
+            Renderer[] renderers =
+                conveyor.GetComponentsInChildren<Renderer>();
+
+            if (renderers.Length == 0)
+                return;
+
+            Bounds bounds = renderers[0].bounds;
+
+            for (int i = 1; i < renderers.Length; i++)
+                bounds.Encapsulate(renderers[i].bounds);
+
+            Vector3 offset = conveyor.transform.position - bounds.center;
+
+            foreach (Transform child in conveyor.transform)
+                child.position += new Vector3(offset.x, 0f, offset.z);
         }
     }
 }

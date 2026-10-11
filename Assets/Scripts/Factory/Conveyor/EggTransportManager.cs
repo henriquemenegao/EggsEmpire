@@ -11,8 +11,8 @@ namespace Factory.Conveyor
 
         [Header("Conveyor Settings")]
         [SerializeField] private float centralConveyorX = 0f;
-        [SerializeField] private float exitZ = -33f;
-        [SerializeField] private float eggHeight = 0.17f;
+        [SerializeField] private float exitZ = -35f;
+        [SerializeField] private float eggHeight = 0.68f;
         [SerializeField] private float rowOffsetZ = -1.75f;
 
         [Header("Test Settings")]

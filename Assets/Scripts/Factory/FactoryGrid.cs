@@ -53,7 +53,7 @@ namespace Factory
                     slot.name = $"Slot_{row:D2}_{col:D2}";
 
                     slot.transform.localPosition =
-                        new Vector3(x, 0, z);
+                        new Vector3(x, -0.4f, z);
 
                     slot.transform.localRotation =
                         Quaternion.identity;

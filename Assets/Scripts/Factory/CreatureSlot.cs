@@ -35,7 +35,7 @@ namespace Factory
 
             // Posiciona a criatura sobre o slot.
             creature.transform.position =
-                transform.position + Vector3.up * 0.1f;
+                transform.position + Vector3.up * 0.85f;
 
             creature.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
 
